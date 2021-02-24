@@ -6,6 +6,7 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
+    <button @click="clicky">Broadcast Message</button>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
@@ -67,6 +68,14 @@ export default {
     msg: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    clicky() {
+      const newMsg = {
+        msg: "This is a broadcasted message"
+      };
+      this.$emit("updateMessage", newMsg);
     }
   }
 };

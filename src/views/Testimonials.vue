@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>Testimonial Page</p>
-    <HelloWorld :msg="message" />
+    <HelloWorld @updateMessage="handleMessageUpdate" :msg="message" />
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
     return {
       message: "Welcome to Your Testimonials page"
     };
+  },
+  methods: {
+    handleMessageUpdate(payload) {
+      this.message = payload.msg;
+    }
   },
   components: {
     HelloWorld
