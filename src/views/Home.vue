@@ -1,19 +1,26 @@
 <!-- eslint-disable -->
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="home-wrapper">
+      <TodoWrapper />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "../components/HelloWorld.vue";
+import TodoWrapper from "../components/TodoWrapper";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    TodoWrapper
   }
 };
 </script>
+
+<style scoped>
+.home-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+</style>

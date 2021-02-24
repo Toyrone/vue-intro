@@ -6,7 +6,7 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <button @click="clicky">Broadcast Message</button>
+    <button class="btn btn-warning" @click="clicky">Broadcast Message</button>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
